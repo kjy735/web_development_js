@@ -27,3 +27,14 @@
 // 그리고 이상의 코드는 오류가 발생함을 확인할 수 있습니다
 // 함수내에 선언된 지역 변수인 comScore를 main단계에서 확인할 수가 없기 때문에
 
+
+
+// object 관련 수업
+let dog = {
+  name: '해피',
+  age: 5,
+  gender: 'M',
+  friends: ['나비', '삐삐', '엘리']
+};
+
+console.log(dog.friends);

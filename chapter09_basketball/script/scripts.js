@@ -127,6 +127,16 @@ function onUserShoot(shootType) {
       alert('비겼습니다 - 게임이 종료되었습니다.');
     }
 
-    
+    let computerButtons = document.getElementsByClassName('btn-computer');
+
+    for(let i = 0; i < computerButtons.length; i++) {
+      computerButtons[i].disabled = true;
+    };
+  
+    let userButtons = document.getElementsByClassName('btn-user');
+  
+    for(let i = 0; i < userButtons.length; i++) {
+      userButtons[i].disabled = true;
+    };
   };
 };
