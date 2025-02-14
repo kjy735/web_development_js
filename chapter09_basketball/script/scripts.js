@@ -111,4 +111,22 @@ function onUserShoot(shootType) {
 
   let shootLeftElement = document.getElementById('shots-left');
   shootLeftElement.innerHTML = shootLeft;
-}
+
+  // 조건물을 적용 -> shootLeft === 0일 때 게임 종료
+  if(shootLeft === 0) {
+    // 사용자가 이겼을 때 - 졌을 때 - 비겼을 때
+    // 이겼습니다 // 졌습니다 // 비겼습니다
+    if(userScore > comScore) {
+      textElement.innerHTML = '이겼습니다';
+      alert('이겼습니다 - 게임이 종료되었습니다.');
+    } else if(userScore < comScore) {
+      textElement.innerHTML = '졌습니다';
+      alert('졌습니다 - 게임이 종료되었습니다.');
+    } else {
+      textElement.innerHTML = '비겼습니다';
+      alert('비겼습니다 - 게임이 종료되었습니다.');
+    }
+
+    
+  };
+};
