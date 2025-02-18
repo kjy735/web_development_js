@@ -17,15 +17,8 @@ let game = {
 
 
 function showText(s) {
-  //let textElement = document.getElementById('text');
-    // $textElement.innerHTML = s;
   let $textElement = $('#text');
-  // 기존 깜빡거리는 예시
-  // $textElement.fadeOut();
-  // $textElement.html(s);
-  // $textElement.fadeIn();
 
-  // 콜백함수를 통한 개선
   $textElement.fadeOut(300, function() {
     $textElement.html(s);
     $textElement.fadeIn(100);
@@ -34,17 +27,6 @@ function showText(s) {
 
 
 function updateComScore(score) {
-  // 바닐라 자바스크립트
- // let comScoreElement = document.getElementById('computer-score');
- // computer.score += score;
- // $comScoreElement.innerHTML = computer.score;
-
- //제이쿼리 적용 후 - 플러그인 전
-  // let $comScoreElement = $('#computer-score');
-  // computer.score += score;
-  // $comScoreElement.html(computer.score);
-
-  // 플러그인 적용 후
   computer.score += score;
   let $comScoreElement = $('#computer-score');
 
@@ -54,17 +36,6 @@ function updateComScore(score) {
 };
 
 function updateUserScore(score) {
-  // 바닐라 자바스크립트
-  //let userScoreElement = document.getElementById('/user-score');
-  // user.score += score;
-  // $userScoreElement.innerHTML = user.score;
-
-  // 플러그인 적용 전
-  // let $userScoreElement = $('#user-score');
-  // user.score += score;
-  // $userScoreElement.html(user.score);
-
-  // 플러그인 적용 후
   user.score += score;
   let $userScoreElement = $('#user-score');
 
@@ -74,20 +45,11 @@ function updateUserScore(score) {
 };
 
 function disableComButton(flag) {
-  // let computerButtons = document.getElementsByClassName('btn-computer');
-
-  // for(let i = 0; i < computerButtons.length; i++) {
-  //   computerButtons[i].disabled = flag;
-  // };
   $('.btn-computer').prop('disabled', flag);
 };
 
 function disableUserButton(flag) {
-  // let userButtons = document.getElementsByClassName('btn-user');
 
-  // for(let i = 0; i < userButtons.length; i++) {
-  //   userButtons[i].disabled = flag;
-  // };
   $('.btn-user').prop('disabled', flag);
 };
 
@@ -162,8 +124,6 @@ function onUserShoot(shootType) {
   game.shootLeft --;
 
 
-  // let shootLeftElement = document.getElementById('shots-left');
-  // $shootLeftElement.innerHTML = game.shootLeft;
   let $shootLeftElement = $('#shots-left');
   $shootLeftElement.html(game.shootLeft);
 
